@@ -10,11 +10,12 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0*"/>
             <ColumnDefinition Width="12*"/>
-            <ColumnDefinition Width="488*"/>
-            <ColumnDefinition Width="36*"/>
-            <ColumnDefinition Width="6*"/>
-            <ColumnDefinition Width="15*"/>
-            <ColumnDefinition Width="138*"/>
+            <ColumnDefinition Width="667*"/>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition Width="16*"/>
         </Grid.ColumnDefinitions>
         <Label Content="Registro Prestamo" HorizontalAlignment="Left" Margin="142,10,0,0" VerticalAlignment="Top" Height="66" Width="310" Background="{x:Null}" Foreground="#FFC10707" FontSize="35" Grid.Column="2"/>
         <Label Content="ID Prestamo" HorizontalAlignment="Left" Margin="142,99,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.772,0.374" Foreground="#FF2800DE" Height="37" Width="150" FontSize="25" Grid.Column="2"/>
@@ -33,7 +34,7 @@
         <Button Content="Guardar" Grid.Column="2" HorizontalAlignment="Left" Height="38" Margin="62,492,0,0" VerticalAlignment="Top" Width="128" Foreground="#FF2B2B2B" FontSize="25"/>
         <Button Content="Editar" Grid.Column="2" HorizontalAlignment="Left" Height="38" Margin="195,492,0,0" VerticalAlignment="Top" Width="128" Foreground="#FF2B2B2B" FontSize="25"/>
         <Button Content="Eliminar" Grid.Column="2" HorizontalAlignment="Left" Height="38" Margin="328,492,0,0" VerticalAlignment="Top" Width="128" Foreground="#FF2B2B2B" FontSize="25"/>
-        <Button Content="Validar" Grid.Column="2" HorizontalAlignment="Left" Height="38" Margin="461,492,0,0" VerticalAlignment="Top" Width="128" Foreground="#FF2B2B2B" FontSize="25" Grid.ColumnSpan="5"/>
+        <Button Content="Validar" Grid.Column="2" HorizontalAlignment="Left" Height="38" Margin="461,492,0,0" VerticalAlignment="Top" Width="128" Foreground="#FF2B2B2B" FontSize="25"/>
         <DatePicker Grid.Column="2" HorizontalAlignment="Left" Height="41" Margin="297,161,0,0" VerticalAlignment="Top" Width="140" RenderTransformOrigin="0.493,0.781"/>
 
     </Grid>
