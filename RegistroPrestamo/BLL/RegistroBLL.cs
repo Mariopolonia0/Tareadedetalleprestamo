@@ -6,6 +6,7 @@ using RegistroPrestamo.Entidades;
 using RegistroPrestamo.DAL;
 using Microsoft.EntityFrameworkCore;
 using System.Linq.Expressions;
+using System.Windows;
 
 namespace RegistroPrestamo.BLL
 {
@@ -19,14 +20,14 @@ namespace RegistroPrestamo.BLL
                 return Modificar(prestamo);
         }
 
-        public static bool Insertar(Prestamo registro)
+        public static bool Insertar(Prestamo prestamo)
         {
             bool paso = false;
             Contexto contexto = new Contexto();
 
             try
             {
-                contexto.Prestamos.Add(registro);
+                contexto.Prestamos.Add(prestamo);
                 paso = contexto.SaveChanges() > 0;
             }
             catch (Exception)
