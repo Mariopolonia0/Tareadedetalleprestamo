@@ -1,0 +1,43 @@
+﻿<Window x:Class="RegistroPrestamo.VentanaCliente"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RegistroPrestamo"
+        mc:Ignorable="d"
+        Title="Registro Cliente" Height="475" Width="494" FontSize="20">
+    <Grid Margin="0,8,0,3" RenderTransformOrigin="0.974,1.053" Background="#FF22B2AB">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="727*"/>
+            <ColumnDefinition Width="13*"/>
+            <ColumnDefinition Width="23*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RenderTransform>
+            <TransformGroup>
+                <ScaleTransform/>
+                <SkewTransform/>
+                <RotateTransform Angle="-0.038"/>
+                <TranslateTransform X="0.23" Y="-0.242"/>
+            </TransformGroup>
+        </Grid.RenderTransform>
+        <Label Content="Registro De Cliente" HorizontalAlignment="Left" Height="46" Margin="67,14,0,0" VerticalAlignment="Top" Width="478" FontSize="35" FontFamily="Algerian" Foreground="#FF000CFF"/>
+        <Label Content="Cedula" HorizontalAlignment="Left" Margin="109,247,0,0" VerticalAlignment="Top" Height="34" Width="105" FontSize="20" Foreground="#FF1700FF"/>
+        <TextBox x:Name="CedulaTextBox" HorizontalAlignment="Left" Margin="224,253,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="153" Height="27" Cursor="Wait"/>
+        <Label Content="Fecha" HorizontalAlignment="Left" Margin="111,335,0,0" VerticalAlignment="Top" Height="34" Width="105" FontSize="20" Foreground="#FF1700FF"/>
+        <DatePicker x:Name="FechaTextBox" HorizontalAlignment="Left" Margin="222,337,0,0" VerticalAlignment="Top" Height="35" Width="174" Foreground="#FF1700FF" FontSize="15"/>
+        <Label Content="Telefono" HorizontalAlignment="Left" Margin="109,203,0,0" VerticalAlignment="Top" Height="34" Width="117" FontSize="20" Foreground="#FF1700FF"/>
+        <TextBox x:Name="TelefonoTextBox" HorizontalAlignment="Left" Margin="224,211,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="153" Height="27" Cursor="Wait"/>
+        <Label Content="Direccion" HorizontalAlignment="Left" Margin="110,290,0,0" VerticalAlignment="Top" Height="34" Width="105" FontSize="20" Foreground="#FF000CFF"/>
+        <TextBox x:Name="DirecionTextBox" HorizontalAlignment="Left" Margin="224,298,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="153" Height="27" Cursor="Wait"/>
+        <Label Content="Nombre" HorizontalAlignment="Left" Margin="109,158,0,0" VerticalAlignment="Top" Height="34" Width="105" FontSize="20" Foreground="#FF1700FF"/>
+        <TextBox x:Name="NombreTextBox" HorizontalAlignment="Left" Margin="224,165,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="153" Height="27" Cursor="Wait"/>
+        <Label Content="Creado Por El Admin" HorizontalAlignment="Left" Margin="157,67,0,0" VerticalAlignment="Top" Height="34" Width="219" FontSize="20" Foreground="#FFE40000"/>
+        <Label Content="ID" HorizontalAlignment="Left" Margin="109,119,0,0" VerticalAlignment="Top" Height="34" Width="105" FontSize="20" Foreground="#FF1700FF"/>
+        <TextBox x:Name="IdTextBox" HorizontalAlignment="Left" Margin="223,128,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="66" Height="23" Cursor="Wait"/>
+        <Button Content="Buscar" HorizontalAlignment="Left" Height="29" Margin="300,124,0,0" VerticalAlignment="Top" Width="76" IsCancel="True" ClickMode="Press"/>
+        <Button Content="Nuevo" HorizontalAlignment="Left" Height="40" Margin="107,385,0,0" VerticalAlignment="Top" Width="97" ClickMode="Press"/>
+        <Button x:Name="GuardarBoton" Content="Guardar" HorizontalAlignment="Left" Height="40" Margin="215,386,0,0" VerticalAlignment="Top" Width="97" ClickMode="Hover" Click="GuardarBoton_Click"/>
+        <Button Content="Eliminar" HorizontalAlignment="Left" Height="40" Margin="322,387,0,0" VerticalAlignment="Top" Width="97"/>
+
+    </Grid>
+</Window>

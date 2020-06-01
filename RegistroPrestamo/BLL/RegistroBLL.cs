@@ -7,130 +7,61 @@ using RegistroPrestamo.DAL;
 using Microsoft.EntityFrameworkCore;
 using System.Linq.Expressions;
 using System.Windows;
+using RegistroPrestamo;
+using System.Threading.Tasks;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
+using System.Windows.Shapes;
+
 
 namespace RegistroPrestamo.BLL
 {
-    class RegistroBLL
+    class RegistroBLL 
     {
-        public static bool Guardar(Prestamo prestamo)
-        {
-            if (!Existe(prestamo.idpersona))
-                return Insertar(prestamo);
-            else
-                return Modificar(prestamo);
-        }
-
-        public static bool Insertar(Prestamo prestamo)
-        {
-            bool paso = false;
-            Contexto contexto = new Contexto();
-
-            try
-            {
-                contexto.Prestamos.Add(prestamo);
-                paso = contexto.SaveChanges() > 0;
-            }
-            catch (Exception)
-            {
-
-                throw;
-            }
-            finally
-            {
-                contexto.Dispose();
-            }
-            return paso;
-        }
-
-        public static bool Modificar(Prestamo prestamo)
-        {
-            bool paso = false;
-            Contexto contexto = new Contexto();
-
-            try
-            {
-                contexto.Entry(prestamo).State = EntityState.Modified;
-                paso = contexto.SaveChanges() > 0;
-            }
-            catch (Exception)
-            {
-
-                throw;
-            }
-            finally
-            {
-                contexto.Dispose();
-            }
-            return paso;
-        }
-
         
-        public static Prestamo Guardar(int id)
+        public static double Guardar(Prestamo prestamo)
         {
             Contexto contexto = new Contexto();
-            Prestamo registro;
+            prestamo.concepto = -1 * prestamo.concepto;
+            double dividiendo = (0.01 * prestamo.monto);
+            double divisor = Math.Pow((1 + 0.01), prestamo.concepto);
+            divisor = divisor - 1;
+            divisor = Math.Round(divisor, 2);
+            divisor = -1 * divisor;
+            divisor = dividiendo / divisor;
+            divisor = Math.Round(divisor, 2);
+            prestamo.Balance = divisor;
+            contexto.Prestamos.Add(prestamo);
+            contexto.SaveChanges();
+            return divisor;
+        }
 
+        public static void GuardarCliente(Cliente cliente)
+        {
+            Contexto contexto = new Contexto();
+    
+            
             try
             {
-                registro = contexto.Prestamos.Find(id);
+                contexto.Clientes.Add(cliente);
+                contexto.SaveChanges();
             }
             catch (Exception)
             {
+
                 throw;
             }
             finally
             {
                 contexto.Dispose();
             }
-            return registro;
         }
 
-        public static bool Existe(int id)
-        {
-            Contexto contexto = new Contexto();
-            bool encotrado = false;
 
-            try
-            {
-                encotrado = contexto.Prestamos.Any(e => e.idpersona == id);
-            }
-            catch (Exception)
-            {
-                throw;
-            }
-            finally
-            {
-                contexto.Dispose();
-            }
-            return encotrado;
-        }
-
-        public static List<Prestamo> GetList(Expression<Func<Prestamo, bool>> cristerio)
-        {
-            List<Prestamo> lista = new List<Prestamo>();
-            Contexto contexto = new Contexto();
-
-            try
-            {
-                lista = contexto.Prestamos.Where(cristerio).ToList();
-            }
-            catch (Exception)
-            {
-                throw;
-            }
-            finally
-            {
-                contexto.Dispose();
-            }
-            return lista;
-        }
-
-        public static Prestamo Buscar(int id)
-        {
-            Contexto contexto = new Contexto();
-            Prestamo registro;
-            registro = contexto.Prestamos.Find(id);
-            return registro;
-        }
     }
 }

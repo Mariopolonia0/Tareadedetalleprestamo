@@ -1,16 +1,17 @@
-﻿<Window x:Class="RegistroPrestamo.MainWindow"
+﻿<Window x:Name="VentanaPrestamo1" x:Class="RegistroPrestamo.VentanaPrestamo"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RegistroPrestamo"
         mc:Ignorable="d"
-        Title="MainWindow" Height="520" Width="667">
-    <Grid Background="#FF747474" HorizontalAlignment="Left" Width="695" Margin="0,0,0,-6">
+        Title="VentanaPrestamo" Height="520" Width="667">
+    <Grid x:Name="VentanaPrestamos" Background="#FF747474" HorizontalAlignment="Left" Width="695" Margin="0,0,0,-6">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0*"/>
             <ColumnDefinition Width="8*"/>
-            <ColumnDefinition Width="671*"/>
+            <ColumnDefinition Width="670*"/>
+            <ColumnDefinition/>
             <ColumnDefinition Width="0*"/>
             <ColumnDefinition Width="0*"/>
             <ColumnDefinition Width="0*"/>
