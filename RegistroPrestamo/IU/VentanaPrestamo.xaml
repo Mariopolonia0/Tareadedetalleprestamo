@@ -5,12 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RegistroPrestamo"
         mc:Ignorable="d"
-        Title="VentanaPrestamo" Height="520" Width="667">
-    <Grid x:Name="VentanaPrestamos" Background="#FF747474" HorizontalAlignment="Left" Width="695" Margin="0,0,0,-6">
+        Title="Registro Prestamo" Height="546" Width="677">
+    <Grid x:Name="VentanaPrestamos" Background="#FF747474" HorizontalAlignment="Left" Width="695" Margin="0,0,0,-38">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0*"/>
             <ColumnDefinition Width="8*"/>
             <ColumnDefinition Width="670*"/>
+            <ColumnDefinition Width="0*"/>
             <ColumnDefinition/>
             <ColumnDefinition Width="0*"/>
             <ColumnDefinition Width="0*"/>
@@ -30,10 +31,10 @@
         <TextBox x:Name="Monto_TextBox" HorizontalAlignment="Left" Margin="297,322,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="140" Height="31" Grid.Column="2"/>
         <Label Content="Balance" HorizontalAlignment="Left" Margin="142,368,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.772,0.374" Foreground="#FF2800DE" Height="37" Width="150" FontSize="25" Grid.Column="2"/>
         <TextBox x:Name="Balance_TextBox" HorizontalAlignment="Left" Margin="297,375,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="140" Height="31" Grid.Column="2" AutomationProperties.IsOffscreenBehavior="FromClip" IsReadOnlyCaretVisible="True"/>
-        <Button x:Name="BotonGuardar" Content="Guardar" Grid.Column="2" HorizontalAlignment="Left" Height="38" Margin="52,445,0,0" VerticalAlignment="Top" Width="128" Foreground="#FF2B2B2B" FontSize="25" Click="BotonGuardar_Click"/>
-        <Button x:Name="BotonEditar" Content="Editar" Grid.Column="2" HorizontalAlignment="Left" Height="38" Margin="185,445,0,0" VerticalAlignment="Top" Width="128" Foreground="#FF2B2B2B" FontSize="25"/>
-        <Button x:Name="BotonEliminar" Content="Eliminar" Grid.Column="2" HorizontalAlignment="Left" Height="38" Margin="318,445,0,0" VerticalAlignment="Top" Width="128" Foreground="#FF2B2B2B" FontSize="25"/>
-        <Button x:Name="BotonValidar" Content="Validar" Grid.Column="2" HorizontalAlignment="Left" Height="38" Margin="451,445,0,0" VerticalAlignment="Top" Width="128" Foreground="#FF2B2B2B" FontSize="25"/>
+        <Button x:Name="BotonGuardar" Content="Guardar" Grid.Column="2" HorizontalAlignment="Left" Height="38" Margin="57,446,0,0" VerticalAlignment="Top" Width="128" Foreground="#FF2B2B2B" FontSize="25" Click="BotonGuardar_Click"/>
+        <Button x:Name="BotonEditar" Content="Editar" Grid.Column="2" HorizontalAlignment="Left" Height="38" Margin="190,446,0,0" VerticalAlignment="Top" Width="128" Foreground="#FF2B2B2B" FontSize="25"/>
+        <Button x:Name="BotonEliminar" Content="Eliminar" Grid.Column="2" HorizontalAlignment="Left" Height="38" Margin="323,446,0,0" VerticalAlignment="Top" Width="128" Foreground="#FF2B2B2B" FontSize="25"/>
+        <Button x:Name="BotonValidar" Content="Validar" Grid.Column="2" HorizontalAlignment="Left" Height="38" Margin="456,446,0,0" VerticalAlignment="Top" Width="128" Foreground="#FF2B2B2B" FontSize="25"/>
         <DatePicker x:Name="Fecha_TextBox" Grid.Column="2" HorizontalAlignment="Left" Height="41" Margin="297,161,0,0" VerticalAlignment="Top" Width="140" RenderTransformOrigin="0.493,0.781"/>
 
     </Grid>

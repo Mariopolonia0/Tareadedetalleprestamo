@@ -1,0 +1,64 @@
+﻿<Window x:Class="RegistroPrestamo.IU.VentanaMora"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RegistroPrestamo.IU"
+        mc:Ignorable="d"
+        Title="Mora" Height="850" Width="600">
+    <Grid Margin="0,0,0,-16">
+
+        <StackPanel Orientation="Vertical" Margin="0,10,236,651">
+            <Label Name="ClienteIdLabel" Content="Cliente Id" FontSize="20" />
+            <TextBox x:Name="ClienteIdTextBox" FontSize="20" HorizontalAlignment="Left"  Height="40" Text="{Binding Id}" Width="332"/>
+        </StackPanel>
+
+        <StackPanel Orientation="Vertical" Margin="364,4,5,668">
+            <Button x:Name="BuscarBoton" Margin="0,42" Height="40" FontSize="25"  Content="Buscar" Click="BuscarBoton_Click"/>
+        </StackPanel>
+
+        <StackPanel Orientation="Vertical" Margin="0,99,0,570">
+            <Label Name="moraIdLabel" Content="Mora Id" FontSize="20" />
+            <TextBox x:Name="MoraIdTextBox" Height="40" Text="{Binding MoraId}" FontSize="20" />
+        </StackPanel>
+
+        <StackPanel Orientation="Vertical"  Margin="0,198,0,454">
+            <Label Name="prestamoIdLabel" Content="Prestamo Id" FontSize="20" />
+            <TextBox x:Name="PrestamoIdTextBox"  Height="40" Text="{Binding PrestamoId}" FontSize="20"/>
+        </StackPanel>
+
+        <StackPanel Orientation="Vertical"   Margin="0,299,0,370" >
+            <Label  Name="ValorLabel" Content="Valor" FontSize="20" />
+            <TextBox x:Name="ValorTextBox"  Height="40" Text="{Binding Valor}" FontSize="20"/>
+        </StackPanel>
+
+        <StackPanel Orientation="Vertical"   Margin="0,392,0,261">
+            <Label  Name="TotalLabel" Content="Total" FontSize="20"  />
+            <TextBox x:Name="TotalTextBox"  Height="40" Text="{Binding Total}" FontSize="20" />
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left"  Margin="0,466,0,284" Width="590">
+            <Button x:Name="AgregarBotton" Content="Agregar" Width="153" Height="34" Margin="10,0" FontSize="20" Click="AgregarBotton_Click" />
+            <Button x:Name="QuitarBotton" Content="Quitar" Width="153" Height="34" Margin="10,0" FontSize="20" Click="QuitarBotton_Click"/>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Margin="0,533,0,121" >
+            <DataGrid x:Name="DetalleDataGrid" Height="180" AutoGenerateColumns="False" ItemsSource="{Binding Detalle}" Width="602" FontSize="15">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Mora Id" Binding="{Binding MoraId}" FontSize="15"/>
+                    <DataGridTextColumn Header="Prestamo Id" Binding="{Binding PrestamoId}" FontSize="15"/>
+                    <DataGridTextColumn Header="Valor" Binding="{Binding Valor}" FontSize="15" />
+
+                </DataGrid.Columns>
+            </DataGrid>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Margin="0,711,0,18">
+            <Button x:Name="NuevoBoton" Content="Nuevo" Width="120" Height="46" Margin="10" FontSize="20"  />
+            <Button x:Name="GuardarBoton" Content="Guardar" Width="120" Height="46" Margin="10" FontSize="20"  />
+            <Button x:Name="EliminarBoton" Content="Eliminar" Width="120" Height="46" Margin="10" FontSize="20"  />
+            <Button x:Name="ValidarBoton" Content="Validar" Width="120" Height="46" Margin="10" FontSize="20"  />
+        </StackPanel>
+
+    </Grid>
+</Window>

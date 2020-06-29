@@ -24,8 +24,9 @@
         <TextBox x:Name="UsuarioTextBox" Grid.Column="3" HorizontalAlignment="Left" Height="34" Margin="252,208,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="174"/>
         <Label Content="Digite La Contraseña" Grid.Column="3" HorizontalAlignment="Left" Height="39" Margin="53,250,0,0" VerticalAlignment="Top" Width="199" FontSize="20"/>
         <TextBox x:Name="ContrasenaTextBox" Grid.Column="3" HorizontalAlignment="Left" Height="34" Margin="252,255,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="174"/>
-        <Button Content="Registro Cliente" Grid.ColumnSpan="4" HorizontalAlignment="Left" Height="31" Margin="1,0,0,0" VerticalAlignment="Top" Width="298" FontSize="20" Click="Button_Click"/>
-        <Button x:Name="RegistroPrestamo" Content="Registro Prestamo" HorizontalAlignment="Left" Height="31" Margin="294,1,0,0" VerticalAlignment="Top" Width="302" FontSize="20" Grid.Column="3" Click="RegistroPrestamo_Click"/>
+        <Button Content="Registro Cliente" Grid.ColumnSpan="4" HorizontalAlignment="Left" Height="31" Margin="1,0,0,0" VerticalAlignment="Top" Width="159" FontSize="15" Click="Button_Click"/>
+        <Button x:Name="RegistroPrestamo" Content="Registro Prestamo" HorizontalAlignment="Left" Height="31" Margin="158,0,0,0" VerticalAlignment="Top" Width="181" FontSize="15" Grid.Column="3" Click="RegistroPrestamo_Click"/>
+        <Button x:Name="MoraBotton" Content="Mora" HorizontalAlignment="Left" Height="31" Margin="344,0,0,0" VerticalAlignment="Top" Width="123" FontSize="15" Grid.Column="3" Click="MoraBotton_Click" />
 
 
     </Grid>

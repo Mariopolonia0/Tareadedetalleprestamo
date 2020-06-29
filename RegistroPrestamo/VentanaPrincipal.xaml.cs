@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RegistroPrestamo.IU;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -20,24 +21,26 @@ namespace RegistroPrestamo
         public VentanaPrincipal()
         {
             InitializeComponent();
+            UsuarioTextBox.Text = "Mario";
+            ContrasenaTextBox.Text = "******";
         }
 
         private void RegistroPrestamo_Click(object sender, RoutedEventArgs e)
         {
-            UsuarioTextBox.Text = "Mario";
-            ContrasenaTextBox.Text = "******";
             VentanaPrestamo ventana = new VentanaPrestamo();
-            ventana.Owner = this;
-            ventana.ShowDialog();
+            ventana.Show();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            UsuarioTextBox.Text = "Mario";
-            ContrasenaTextBox.Text = "******";
             VentanaCliente ventana = new VentanaCliente();
-            ventana.Owner = this;
-            ventana.ShowDialog();
+            ventana.Show();
+        }
+
+        private void MoraBotton_Click(object sender, RoutedEventArgs e)
+        {
+            VentanaMora ventanamora = new VentanaMora();
+            ventanamora.Show();
         }
     }
 }
