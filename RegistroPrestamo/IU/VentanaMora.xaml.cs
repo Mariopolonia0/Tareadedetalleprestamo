@@ -42,18 +42,18 @@ namespace RegistroPrestamo.IU
 
         private void BuscarBoton_Click(object sender, RoutedEventArgs e)
         {
-            Mora encontrado = MoraBLL.Buscar(mora.MoraId);
+            Mora encontrado = MoraBLL.Buscar(Convert.ToInt32(MoraIdTextBox.Text));
 
             if (encontrado != null)
             {
                 mora = encontrado;
                 Cargar();
-                MessageBox.Show("Tarea encontrada", "Exito", MessageBoxButton.OK, MessageBoxImage.Information);
+                MessageBox.Show("Mora encontrada", "Exito", MessageBoxButton.OK, MessageBoxImage.Information);
             }
             else
             {
                 Limpiar();
-                MessageBox.Show("Tarea no existe en la base de datos", "Fallo", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("Mora no existe en la base de datos", "Fallo", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
 
@@ -76,6 +76,46 @@ namespace RegistroPrestamo.IU
                 mora.Detalle.RemoveAt(DetalleDataGrid.SelectedIndex);
                 Cargar();
             }
+        }
+
+        private void NuevoBoton_Click(object sender, RoutedEventArgs e)
+        {
+            Limpiar();
+        }
+
+       
+
+        private void GuardarBoton_Click(object sender, RoutedEventArgs e)
+        {
+            bool paso = false;
+
+            if (mora.MoraId == 0)
+                return;
+
+            paso = MoraBLL.Guardar(mora);
+
+        }
+
+        private void EliminarBoton_Click(object sender, RoutedEventArgs e)
+        {
+            Mora existe = MoraBLL.Buscar(mora.MoraId);
+
+            if (existe == null)
+            {
+                MessageBox.Show("No existe la tarea en la base de datos", "Fallo", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+            else
+            {
+                MoraBLL.Eliminar(mora.MoraId);
+                MessageBox.Show("Eliminado", "Exito", MessageBoxButton.OK, MessageBoxImage.Information);
+                Limpiar();
+            }
+        }
+
+        private void ValidarBoton_Click(object sender, RoutedEventArgs e)
+        {
+            Cargar();
         }
     }
 }

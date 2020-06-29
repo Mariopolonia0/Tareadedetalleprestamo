@@ -45,28 +45,6 @@ namespace RegistroPrestamo.BLL
             return paso;
         }
 
-
-        public static void GuardarCliente(Cliente cliente)
-        {
-            Contexto contexto = new Contexto();
-
-            try
-            {
-                contexto.Clientes.Add(cliente);
-                contexto.SaveChanges();
-            }
-            catch (Exception)
-            {
-
-                throw;
-            }
-            finally
-            {
-                contexto.Dispose();
-            }
-        }
-
-
         private static bool Modificar(Mora mora)
         {
             bool paso = false;

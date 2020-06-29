@@ -54,10 +54,10 @@
         </StackPanel>
 
         <StackPanel Orientation="Horizontal" Margin="0,711,0,18">
-            <Button x:Name="NuevoBoton" Content="Nuevo" Width="120" Height="46" Margin="10" FontSize="20"  />
-            <Button x:Name="GuardarBoton" Content="Guardar" Width="120" Height="46" Margin="10" FontSize="20"  />
-            <Button x:Name="EliminarBoton" Content="Eliminar" Width="120" Height="46" Margin="10" FontSize="20"  />
-            <Button x:Name="ValidarBoton" Content="Validar" Width="120" Height="46" Margin="10" FontSize="20"  />
+            <Button x:Name="NuevoBoton" Content="Nuevo" Width="120" Height="46" Margin="10" FontSize="20" Click="NuevoBoton_Click"  />
+            <Button x:Name="GuardarBoton" Content="Guardar" Width="120" Height="46" Margin="10" FontSize="20" Click="GuardarBoton_Click"  />
+            <Button x:Name="EliminarBoton" Content="Eliminar" Width="120" Height="46" Margin="10" FontSize="20" Click="EliminarBoton_Click"  />
+            <Button x:Name="ValidarBoton" Content="Validar" Width="120" Height="46" Margin="10" FontSize="20" Click="ValidarBoton_Click"  />
         </StackPanel>
 
     </Grid>
